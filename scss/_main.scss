@@ -1,0 +1,112 @@
+/* MAIN */
+
+.cajasIndex {
+    border-bottom: 2.5px black solid;
+    border-left: 2.5px black solid;
+    border-right: 2.5px black solid;
+    border-radius: 2rem;
+    margin: 5%;
+    padding: 3%;
+  }
+  
+  .margenesPrincipal {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .margenesSecundarios {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .anchoImagenes {
+    width: 80%;
+    height: 85%;
+    padding: 1%;
+    border-left: solid rgb(25, 75, 70) 2.5px;
+    border-right: solid rgb(25, 75, 70) 2.5px;
+  }
+  
+  .centrado {
+      display: block;
+      margin: auto;
+      margin-top: 1%;
+  }
+  
+  .textosCarrusel {
+      color: white;
+  }
+  
+  .tarjetaServicios {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .contenedorServicios {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  
+  .formularioContacto {
+    margin: 2% 30% 2% 30%;
+  }
+  
+  .bordesFormularios {
+    border: #d5dfdc solid 3px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 1rem;
+  }
+  
+  .comentarioFormularios {
+      margin-left: 2px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  .cajasAboutUs {
+    border-bottom: 2.5px black solid;
+    border-left: 2.5px black solid;
+    border-right: 2.5px black solid;
+    border-radius: 1rem;
+    margin: 0% 2% 2% 2%;
+  }
+  
+  .tituloAboutUs {
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
+  }
+
+  .subtituloFormulario {
+    @extend .tituloAboutUs;
+    text-align: center;
+  }
+  
+  .tituloAboutUs2 {
+    margin-top: 4%;
+    margin-bottom: 1.5%;
+  }
+  
+  .tituloAboutUs3 {
+    margin-bottom: 1.5%;
+  }
+  
+  .videoYTFlexbox {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: center;
+  }
+
+  .titulosServicios {
+    text-align: left;
+  }
+
+  .parrafoServicios {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+  }

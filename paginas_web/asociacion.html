@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asociación - SMG</title>
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- ANIMATE CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <meta
+      name="description"
+      content="Se parte de Smart Medical Group. Página web que permite seleccionar la cartilla médica que más se adecúe a tus necesidades."
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bgNavSMG">
+        <div class="container-fluid">
+          <a href="../index.html" class="contenedorLogotipo"
+            ><img
+              class="logotipoSMG"
+              src="../multimedia/LOGOTIPOSMG2.jpg"
+              alt="logotipo_SMG"
+          /></a>
+          <a href="../index.html"
+            ><h1 class="tituloPrincipal">Asociación</h1></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end bgNavSMG"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h2
+                class="offcanvas-title tituloMenu"
+                id="offcanvasDarkNavbarLabel"
+              >
+                Menú
+              </h2>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="asociacion.html"
+                    >Asociación</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Otras Opciones
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="aboutus.html"
+                        >Sobre Nosotros</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="¿Qué estás buscando?"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success colorBoton" type="submit">
+                  Buscar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h3 class="subtituloFormulario">Planes Médicos - ¡Conviértete en Socio/a!</h3>
+
+      <!-- PLANES MÉDICOS -->
+      <h4><button class="navbar-brand" id="identificarse">¡Identifícate!</button></h4>
+      
+      <div id="planes" class="col">
+      </div>
+
+    </main>
+
+    <footer class="alineadoCentro">
+      <a class="espaciadoFooter" href="https://www.instagram.com/">Instagram</a>
+      <a class="espaciadoFooter" href="https://www.facebook.com/">Facebook</a>
+      <a class="espaciadoFooter" href="https://www.twitter.com/">Twitter</a>
+      <a class="espaciadoFooter" href="https://www.youtube.com/">Youtube</a>
+      <a class="espaciadoFooter" href="https://www.google.com.ar/maps"
+        >Google Maps</a
+      >
+      <p class="espaciadoFooter">
+        Elaborado por Antonio Urdaneta - Todos los derechos reservados.
+      </p>
+      <p class="espaciadoFooter">2022.</p>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../simuladorsmg.js"></script>
+  </body>
+</html>

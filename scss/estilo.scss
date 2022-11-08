@@ -1,0 +1,89 @@
+@import "header";
+@import "main";
+@import "footer";
+@import "mixin";
+@import "extend";
+@import "mapas";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 992px) {
+  .indexItem2 {
+    font-size: smaller;
+  }
+
+  .indexItem6 {
+    font-size: smaller;
+  }
+
+  .indexItem8 {
+    font-size: smaller;
+  }
+
+  .formularioContacto {
+    margin: 2% 45px 2% 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .indexItem1 {
+    font-size: large;
+    margin-left: 10%;
+  }
+
+  .indexItem2 {
+    width: 200%;
+  }
+
+  .indexItem3 {
+    display: none;
+  }
+
+  .indexItem4 {
+    margin-top: 10%;
+    font-size: large;
+  }
+
+  .indexItem5 {
+    margin-top: 5%;
+    width: 210%;
+  }
+
+  .indexItem6 {
+    display: none;
+  }
+
+  .indexItem7 {
+    font-size: large;
+  }
+
+  .indexItem8 {
+    width: 200%;
+    margin-right: 10%;
+  }
+
+  .indexItem9 {
+    display: none;
+  }
+
+  .imagenEsp {
+    display: none;
+  }
+
+  .logotipoSMG {
+    display: none;
+  }
+
+  .contenedorLogotipo {
+    display: none;
+  }
+
+  .carrusel {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+.alineadoCentro {
+  text-align: center;
+  background-color: #d5dfdc;
+}
+
+.videoYoutube {
+  @extend .alineadoCentro;
+  margin-bottom: 2%;
+}

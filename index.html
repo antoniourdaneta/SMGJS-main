@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Medical Group</title>
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <meta name="description" content="Smart Medical Group ofrece una larga cartilla de servicios médicos en la Argentina. Somos la prepaga con mayor alcance en el país.">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bgNavSMG">
+        <div class="container-fluid">
+        <a href="index.html" class="contenedorLogotipo"><img class="logotipoSMG" src="multimedia/LOGOTIPOSMG2.jpg" alt="logotipo_SMG"></a>
+          <a href="index.html"><h1 class="tituloPrincipal">Smart Medical Group</h1></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end bgNavSMG"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h2
+                class="offcanvas-title tituloMenu"
+                id="offcanvasDarkNavbarLabel"
+              >
+                Menú
+              </h2>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="paginas_web/servicios.html"
+                    >Servicios</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="paginas_web/asociacion.html"
+                    >Asociación</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Otras Opciones
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="paginas_web/aboutus.html"
+                        >Sobre Nosotros</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="paginas_web/contacto.html"
+                        >Contacto</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="¿Qué estás buscando?"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success colorBoton" type="submit">
+                  Buscar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="carrusel">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="multimedia/carrusel/equipoSMG2 - Copy.jpg" class="d-block centrado" alt="equipo_medico">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Equipos Médicos</h3>
+              <p>Contamos con los mejores equipos médicos del país</s></p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="multimedia/carrusel/healthcare2 - Copy.jpg" class="d-block centrado" alt="servicios">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Servicios en Cartilla</h3>
+              <p>Tenemos una extensa variedad de especialidades y servicios</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/carrusel/pediatria2 - Copy.jpg" class="d-block centrado" alt="pediatria">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Médicos Pediatras</h3>
+              <p>Contamos con los mejores pediatras del país para los más chicos</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/carrusel/covid19-2 - Copy.jpg" class="d-block centrado" alt="covid19">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>COVID-19 - Test PCR</h3>
+              <p>Los mejores cuidados contra el coronavirus-19</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <main class="container text-center margenesPrincipal animate__animated animate__fadeInUp animate__fast">
+      <div class="row">
+        <div class="col">
+          <h4 class="indexItem1">Novedades para los Afiliados</h4>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="cajasIndex indexItem2 parrafosConEstilo">
+            En Clínica y Maternidad SMG Argentina tenemos la más actualizada tecnología y los mejores especialistas. Entre los servicios que nos diferencian contamos con las especialidades Genética Obstétrica y Cardiología vascular Pediátrica. También contamos con equipamiento de última generación en imagenología cardíaca y una Unidad de Cuidados Intensivos Cardiaco Pediátricos.
+          </p>
+        </div>
+
+        <div class="col">
+            <img class="anchoImagenes indexItem3" src="multimedia/novedades_medicas.jpg" alt="novedades_medicas">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <h4 class="indexItem4">¡Beneficios Exclusivos SMG!</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <img class="anchoImagenes indexItem5" src="multimedia/beneficios_medicos.jpg" alt="novedades_medicas">
+        </div>
+        <div class="col">
+          <p class="cajasIndex indexItem6 parrafosConEstilo">
+            Accedé a beneficios, actividades y sorteos exclusivos para asociados de Smart Medical Group. Tenemos beneficios relacionados a actividad física y nutrición, cultura y entretenimiento, momentos de relajamiento, familia y tiempo de esparcimiento. Beneficios que te hacen bien y cuidan de tu bienestar.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h4 class="indexItem7">Credencial Digital</h4>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="cajasIndex indexItem8 parrafosConEstilo">
+            Activá tu credencial digital y tenela siempre a mano. Esta credencial es mucho más práctica y segura, es amigable con el medio ambiente y se puede usar sin conexión al dispositivo móvil. Ahora también podés activar las credenciales digitales de tu grupo familiar y compartirla si necesitás que otra persona te compre medicamentos, acompañe a adultos mayores o a tus hijos al médico.
+          </p>
+        </div>
+
+        <div class="col">
+            <img class="anchoImagenes indexItem9" src="multimedia/credencial_medica.jpg" alt="credencial_medica">
+        </div>
+      </div>
+    </main>
+
+    <footer class="alineadoCentro">
+      <a class="espaciadoFooter" href="https://www.instagram.com/">Instagram</a>
+      <a class="espaciadoFooter" href="https://www.facebook.com/">Facebook</a>
+      <a class="espaciadoFooter" href="https://www.twitter.com/">Twitter</a>
+      <a class="espaciadoFooter" href="https://www.youtube.com/">Youtube</a>
+      <a class="espaciadoFooter" href="https://www.google.com.ar/maps">Google Maps</a>
+      <p class="espaciadoFooter">
+        Elaborado por Antonio Urdaneta - Todos los derechos reservados.
+      </p>
+      <p class="espaciadoFooter">2022.</p>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="simuladorsmg.js"></script>
+  </body>
+</html>
