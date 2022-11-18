@@ -161,6 +161,14 @@ a {
   margin-left: 15px;
 }
 
+.colorBoton2 {
+  background-color: #71a4a2;
+  border-color: #6c9c9b; }
+  .colorBoton:hover {
+    background-color: #67a5a3;
+    border-color: #6bacab;
+  }
+
 .tarjetasPlanes {
   padding: 0;
   margin-top: 10px;

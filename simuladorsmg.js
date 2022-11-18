@@ -1,146 +1,59 @@
-//Se solicita Usuario y Contraseña a la persona para registrarse en el sitio web y adquirir un plán médico a través del cotizador de SMG
-
-//Algoritmo Condicional, Cíclico y Funciones
-
-/*
-
-alert("Regístrate en SMG para acceder a las cotizaciones de planes médicos.");
-
-let mail = prompt(
-  "Ingresa un correo eléctronico para asociarlo a tu cuenta SMG."
-);
-let user = prompt(
-  "Ingresa un nombre de usuario para registrarte en Smart Medical Group."
-);
-let pass = prompt("Ingresa una contraseña para tu usuario en SMG.");
-
-alert("Inicia sesión en SMG para conocer nuestros planes.");
-
-let usuario = prompt("Ingresa tu nombre de usuario para iniciar sesión.");
-let contrasenia = prompt(
-  "Ingresa tu contraseña para el usuario " + usuario + "."
-);
-
-function cotizarPlanMedico() {
-
-  let planmedico = prompt(
-    "Indícanos las especialidades médicas que quisieras tener en tu plan / cartilla de Smart Medical Group. Ej: odontologia, psicologia, enfermeria, otros. Recomendamos escribirlas todas en minúsucula y sin tildes."
-  );
-
-  while (planmedico != "plansmg") {
-    switch (planmedico) {
-      case "odontologia":
-        console.log("Odontología");
-        break;
-      case "enfermeria":
-        console.log("Enfermería");
-        break;
-      case "emergencias":
-        console.log("Emergencias");
-        break;
-      case "cirugia":
-        console.log("Cirugía");
-        break;
-      case "cirugia bucal":
-        console.log("Cirugía Bucal");
-        break;
-      case "psicologia":
-        console.log("Psicología");
-        break;
-      case "gastroenterologia":
-        console.log("Gastroenterología");
-        break;
-      case "dermatologia":
-        console.log("Dermatología");
-        break;
-      case "cardiologia":
-        console.log("Cardiología");
-        break;
-      case "medicina general":
-        console.log("Medicina General");
-        break;
-      default:
-        console.log("No contamos con ese servicio.");
-        break;
-    }
-    planmedico = prompt(
-      "Ingresa la especialidad médica (escribe plansmg para finalizar)."
-    );
-  }
-
-  console.log(
-    "Señor/a " +
-      user +
-      ": En base a tu selección de especialidades médicas te haremos llegar a tu correo electrónico '" +
-      mail +
-      "' el plan médico SMG que más se adecúe a tus preferencias. ¡Está atento/a!"
-  );
-}
-
-if (usuario == user && contrasenia == pass) {
-  console.log("¡Bienvenido al cotizador de planes SMG!");
-
-cotizarPlanMedico();
-
-} else {
-  console.log(
-    "Usuario y/o contraseña erróneos, por favor verifica tus datos para poder acceder al cotizador."
-  );
-}
-
-*/
-
-//ACLARATORIA: Decidí comentar el resto del código para que la lógica del desafío actual esté definida por lo que recién desarrollé y no se solape con las primeras partes.
-
 //Lista de planes médicos
-
 const cotizador = []
 const planesSMG = [
   { id: 01,
-    nombre: "PlanSMG 01",
+    nombre: "PlanSMG Basic",
     ubicacion: "Sanatorio SMG",
+    descripcion: "Emergencias y Cobertura Básica",
     preciodelista: 58000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 02,
-    nombre: "PlanSMG 02",
+    nombre: "PlanSMG Bronce",
     ubicacion: "Sanatorio SMG",
+    descripcion: "Emergencias, Cobertura Básica y Odontología",
     preciodelista: 62000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 03,
-    nombre: "PlanSMG 03",
+    nombre: "PlanSMG Silver",
     ubicacion: "Sanatorio SMG",
+    descripcion: "Emergencias y Cobertura Completa",
     preciodelista: 79000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 04,
-    nombre: "PlanSMG 04",
+    nombre: "PlanSMG Gold",
     ubicacion: "Sanatorio SMG",
+    descripcion: "Emergencias, Cobertura Completa y Odontología",
     preciodelista: 88000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 05,
-    nombre: "PlanSMG 01 - Exclusive",
+    nombre: "PlanSMG Black",
     ubicacion: "Sanatorio SMG Exclusive",
+    descripcion: "Emergencias, Cobertura Completa, Odontología y Servicios Especiales I",
     preciodelista: 128000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 06,
-    nombre: "PlanSMG 02 - Exclusive",
+    nombre: "PlanSMG Black I",
     ubicacion: "Sanatorio SMG Exclusive",
+    descripcion: "Emergencias, Cobertura Completa, Odontología / Ortodoncia y Servicios Especiales II",
     preciodelista: 142000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 07,
-    nombre: "PlanSMG 03 - Exclusive",
+    nombre: "PlanSMG Black II",
     ubicacion: "Sanatorio SMG Exclusive",
+    descripcion: "Emergencias, Cobertura Exclusive Media, Odontología / Ortodoncia y Servicios Especiales III",
     preciodelista: 167000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
   { id: 08,
-    nombre: "PlanSMG 04 - Exclusive",
+    nombre: "PlanSMG Black III",
     ubicacion: "Sanatorio SMG Exclusive",
+    descripcion: "Emergencias, Cobertura Exclusive Completa, Odontología / Ortodoncia y Servicios Especiales IV",
     preciodelista: 188000,
     img:"../multimedia/LOGOTIPOSMG2.jpg"
   },
@@ -148,12 +61,11 @@ const planesSMG = [
 
 //Funciones 
 //Función para identificarse en el sitio WEB
-
 function identificacion(){
   localStorage.setItem("usuario", prompt("Hola, bienvenido, ¿puede indicarnos su nombre?"))
 }
 
-// Función para cotizar el plan médico de preferencia
+// Función para comparar los planes médicos y poder seleccionar el de preferencia
 function item(nombre, id, preciodelista){
   this.nombre = prompt("Inserta el nombre del Plan Médico: ", nombre),
   this.id = prompt("Ingresa el ID del Plán Médico: ", id),
@@ -164,7 +76,7 @@ let planesMedicos = document.getElementById("planes");
 function mostrador(){
     for(const planes of planesSMG){
 
-      //Variable para generar las cards de los planes
+      //Variable para generar las cards de los planes médicos
       let plan = document.createElement("div");
       
       plan.className="card col-md-3"
@@ -177,11 +89,10 @@ function mostrador(){
           />
             <div class="card-body">
               <h4 class="card-title">${planes.nombre}</h4>
-              <h5>Precio de lista: $${planes.preciodelista}</h5>
       
               <button
                 type="button"
-                class="btn btn-primary fondoBoton botones2"
+                class="btn btn-success colorBoton2"
                 data-bs-toggle="modal"
                 data-bs-target="#p1${planes.id}"
               >
@@ -216,7 +127,6 @@ function mostrador(){
                         alt="${planes.nombre}"
                       />
                       <h4 class="card-title">${planes.nombre}</h4>
-                      <h5>$ ${planes.preciodelista}</h5>
                     </div>
                     <div class="modal-footer">
                       <button
@@ -245,7 +155,7 @@ function mostrador(){
     });
 }
 
-//Función para agregar al cotizador los planes médicos
+//Función para agregar al simulador los planes médicos
 function agregarAlCotizador(planAgregadoAlCotizador){
   if (localStorage.getItem("usuario") === "null" | localStorage.getItem("usuario") === ""){
     localStorage.setItem("usuario", prompt("Hola, bienvenido, ¿puede indicarnos su nombre?"))
@@ -254,7 +164,7 @@ function agregarAlCotizador(planAgregadoAlCotizador){
   console.table(cotizador)
   }
 
-//Notificación de Sweet Alert sobre los planes agregados
+//Notificación de Sweet Alert sobre los planes agregados al simulador
   Swal.fire({
     title: planAgregadoAlCotizador.nombre,
     text: 'Se agregó al simulador de Planes Médicos',
@@ -266,12 +176,29 @@ document.getElementById("tablabody").innerHTML += `
     <tr>
         <td>${planAgregadoAlCotizador.id}</td>
         <td>${planAgregadoAlCotizador.nombre}</td>
+        <td>${planAgregadoAlCotizador.descripcion}</td>
         <td>${planAgregadoAlCotizador.preciodelista}</td>
         <td>${planAgregadoAlCotizador.ubicacion}</td>
+        <td><button
+        type="button"
+        id="btn${planAgregadoAlCotizador.id}"
+        class="btn btn-light margenesSecundarios"
+        data-bs-toggle="modal"
+      >
+        Suscribirse al Plan Médico
+      </button></td>
     </tr>
 `;
-//let totalPlanesSeleccionados = cotizador.reduce((acumulador,planes2)=>acumulador+planes2.precio,0);
-//document.getElementById("total").innerText = "Total a pagar $: "+totalCarrito;
+}
+
+//Función para finalizar la suscripción al plan médico
+function suscripcionFinal(){
+  Swal.fire({
+    title: planAgregadoAlCotizador.nombre,
+    text: 'El Plan Médico se ha adquirido exitosamente! Estaremos enviando la información de detalle al usuario.',
+    imageUrl: planAgregadoAlCotizador.img,
+    imageAlt: planAgregadoAlCotizador.nombre,
+  });
 }
 
 mostrador();
