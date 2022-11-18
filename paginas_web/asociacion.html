@@ -130,8 +130,23 @@
       <!-- PLANES MÉDICOS -->
       <h4><button class="navbar-brand" id="identificarse">¡Identifícate!</button></h4>
       
-      <div id="planes" class="col">
+      <div id="planes" class="row tarjetasPlanes">
       </div>
+
+      <h4>Planes Médicos seleccionados:</h4>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Precio de lista</th>
+                  <th>Ubicación</th>
+              </tr>
+          </thead>
+          <tbody id="tablabody">
+              <!-- aqui tabla simulador -->
+          </tbody>
+      </table>
 
     </main>
 
@@ -156,5 +171,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../simuladorsmg.js"></script>
+    <!-- Sweet alert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

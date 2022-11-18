@@ -147,13 +147,13 @@ const planesSMG = [
 ]
 
 //Funciones 
-//Función para identificarse
+//Función para identificarse en el sitio WEB
 
 function identificacion(){
   localStorage.setItem("usuario", prompt("Hola, bienvenido, ¿puede indicarnos su nombre?"))
 }
 
-// Función para cotizar el plan médico
+// Función para cotizar el plan médico de preferencia
 function item(nombre, id, preciodelista){
   this.nombre = prompt("Inserta el nombre del Plan Médico: ", nombre),
   this.id = prompt("Ingresa el ID del Plán Médico: ", id),
@@ -162,24 +162,28 @@ function item(nombre, id, preciodelista){
 
 let planesMedicos = document.getElementById("planes");
 function mostrador(){
-    for(const plan of planesSMG){
-      planesMedicos.className="card col-md-3"
-        planesMedicos.innerHTML += `
+    for(const planes of planesSMG){
+
+      //Variable para generar las cards de los planes
+      let plan = document.createElement("div");
+      
+      plan.className="card col-md-3"
+        plan.innerHTML += `
         <div class="card a2 botones">
           <img
-            src="${plan.img}"
+            src="${planes.img}"
             class="card-img-top"
-            alt="${plan.nombre}"
+            alt="${planes.nombre}"
           />
             <div class="card-body">
-              <h4 class="card-title">${plan.nombre}</h4>
-              <h5>Precio de lista: $${plan.preciodelista}</h5>
+              <h4 class="card-title">${planes.nombre}</h4>
+              <h5>Precio de lista: $${planes.preciodelista}</h5>
       
               <button
                 type="button"
                 class="btn btn-primary fondoBoton botones2"
                 data-bs-toggle="modal"
-                data-bs-target="#p1${plan.id}"
+                data-bs-target="#p1${planes.id}"
               >
                 Agregar al cotizador
               </button>
@@ -187,7 +191,7 @@ function mostrador(){
               <!-- despliegue del cuadro flotante -->
               <div
                 class="modal fade"
-                id="p1${plan.id}"
+                id="p1${planes.id}"
                 tabindex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
@@ -207,12 +211,12 @@ function mostrador(){
                     </div>
                     <div class="modal-body">
                       <img
-                        src="${plan.img}"
+                        src="${planes.img}"
                         class="card-img-top"
-                        alt="${plan.nombre}"
+                        alt="${planes.nombre}"
                       />
-                      <h4 class="card-title">${plan.nombre}</h4>
-                      <h5>$ ${plan.preciodelista}</h5>
+                      <h4 class="card-title">${planes.nombre}</h4>
+                      <h5>$ ${planes.preciodelista}</h5>
                     </div>
                     <div class="modal-footer">
                       <button
@@ -222,7 +226,7 @@ function mostrador(){
                       >
                         Cancelar
                       </button>
-                      <button id='AC${plan.id}' type="button" class="btn btn-primary fondoBoton">
+                      <button id='AC${planes.id}' type="button" class="btn btn-primary fondoBoton">
                         Cotizar
                       </button>
                     </div>
@@ -231,25 +235,43 @@ function mostrador(){
               </div>
           </div>
       </div>
-        `;;
+        `;
+        planesMedicos.append(plan);
     }
-
-    planesSMG.forEach((plan)=>{
-        document.getElementById(`AC${plan.id}`).addEventListener("click",function(){
-            agregarAlCotizador(plan);
+    planesSMG.forEach((planes)=>{
+        document.getElementById(`AC${planes.id}`).addEventListener("click",function(){
+            agregarAlCotizador(planes);
         });
     });
 }
 
-//Función para agregar al cotizador
+//Función para agregar al cotizador los planes médicos
 function agregarAlCotizador(planAgregadoAlCotizador){
   if (localStorage.getItem("usuario") === "null" | localStorage.getItem("usuario") === ""){
     localStorage.setItem("usuario", prompt("Hola, bienvenido, ¿puede indicarnos su nombre?"))
   }else{
   cotizador.push(planAgregadoAlCotizador)
   console.table(cotizador)
-  alert("Se agrego el "+planAgregadoAlCotizador.nombre+ " al cotizador de Planes Médicos SMG, ¡muchas gracias "+localStorage.getItem("usuario")+"!")
   }
+
+//Notificación de Sweet Alert sobre los planes agregados
+  Swal.fire({
+    title: planAgregadoAlCotizador.nombre,
+    text: 'Se agregó al simulador de Planes Médicos',
+    imageUrl: planAgregadoAlCotizador.img,
+    imageAlt: planAgregadoAlCotizador.nombre,
+    ubicacion: planAgregadoAlCotizador.ubicacion,
+  });
+document.getElementById("tablabody").innerHTML += `
+    <tr>
+        <td>${planAgregadoAlCotizador.id}</td>
+        <td>${planAgregadoAlCotizador.nombre}</td>
+        <td>${planAgregadoAlCotizador.preciodelista}</td>
+        <td>${planAgregadoAlCotizador.ubicacion}</td>
+    </tr>
+`;
+//let totalPlanesSeleccionados = cotizador.reduce((acumulador,planes2)=>acumulador+planes2.precio,0);
+//document.getElementById("total").innerText = "Total a pagar $: "+totalCarrito;
 }
 
 mostrador();

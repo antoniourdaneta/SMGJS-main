@@ -150,7 +150,7 @@ a {
   margin: 0;
   padding: 0; }
 
-/* JS */
+/* Estislo para JS */
 
 .botones {
   align-items: center;
@@ -159,6 +159,14 @@ a {
 
 .botones2 {
   margin-left: 15px;
+}
+
+.tarjetasPlanes {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* MEDIA QUERY */
